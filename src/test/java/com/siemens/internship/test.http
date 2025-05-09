@@ -1,0 +1,38 @@
+### List all items
+GET http://localhost:8080/api/items
+Accept: application/json
+
+### Create a new item
+POST http://localhost:8080/api/items
+Content-Type: application/json
+
+{
+  "name": "Test Item",
+  "description": "Descriere item",
+  "status": "NEW",
+  "email": "user@example.com"
+}
+
+### Get item by ID
+GET http://localhost:8080/api/items/1
+Accept: application/json
+
+### Update item by ID
+PUT http://localhost:8080/api/items/1
+Content-Type: application/json
+
+{
+  "name": "Updated Name",
+  "description": "Descriere actualizată",
+  "status": "UPDATED",
+  "email": "newemail@example.com"
+}
+
+### Delete item by ID
+DELETE http://localhost:8080/api/items/1
+
+### Process all items asynchronously
+GET http://localhost:8080/api/items/process
+Accept: application/json
+
+
